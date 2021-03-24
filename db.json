@@ -1,0 +1,312 @@
+{
+  "additives": [
+    {
+      "id": "100",
+      "name": "Curcumine",
+      "level": "0",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "101",
+      "name": "Lactoflavine",
+      "level": "0",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "102",
+      "name": "Tartrazine",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "104",
+      "name": "Jaune de quinoleine",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "110",
+      "name": "Jaune orangé S",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "120",
+      "name": "Cochenille - acide carminique",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "122",
+      "name": "Azorubine",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "123",
+      "name": "Amarante",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "124",
+      "name": "Ponceau 4R",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "127",
+      "name": "Erythrosine",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "128",
+      "name": "Rouge 2G/azogéranine",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "129",
+      "name": "Rouge allura AC",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "131",
+      "name": "Bleu patenté V",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "132",
+      "name": "Indigotine",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "133",
+      "name": "Bleu brillant FCF",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "140",
+      "name": "Chlorophylles/phéophytine au magnésium",
+      "level": "0",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "141",
+      "name": "Chlorophylles/Chlorophyllines",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "142",
+      "name": "Vert acide brillant BS",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "150",
+      "name": "Caramel ordinaire",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "150c",
+      "name": "Caramel ammoniacal - ammonium",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "150d",
+      "name": "Caramel ammoniacal - ammonium",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "151",
+      "name": "Noir brillant BN",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "153",
+      "name": "Carbo médicinalis vegetalis",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "154",
+      "name": "Brun FK",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "155",
+      "name": "Brun chocolat HT",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "160",
+      "name": "Carotènes, caroténoïdes mélangés",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "160b",
+      "name": "Roucou, Norbixine, Bixine",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "160c",
+      "name": "Extrait de paprika",
+      "level": "0",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "160d",
+      "name": "Lycopène rouge",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "161",
+      "name": "Xanthophylle jaune",
+      "level": "1",
+      "type": "colorants",
+      "info": "Interdit en Suisse"
+    },
+    {
+      "id": "161a",
+      "name": "Flaxoxanthine",
+      "level": "1",
+      "type": "colorants",
+      "info": "Interdit en Suisse"
+    },
+    {
+      "id": "161b",
+      "name": "Lutéine jaune/rouge",
+      "level": "2",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "161c",
+      "name": "Cryptoxantthine",
+      "level": "2",
+      "type": "colorants",
+      "info": "Interdit en Suisse"
+    },
+    {
+      "id": "161g",
+      "name": "Canthaxanthine",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "162",
+      "name": "Rouge betterave - bétanine",
+      "level": "0",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "163",
+      "name": "Anthocyanes pourpre à violet",
+      "level": "0",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "170",
+      "name": "Carbonates de calcium",
+      "level": "3",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "171",
+      "name": "Dioxyde de titane",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "172",
+      "name": "Oxyde et hydroxyde de fer",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "173",
+      "name": "Aluminium",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "174",
+      "name": "Argent - argentum",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "175",
+      "name": "Or - aurum",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "180",
+      "name": "Litholrubine BK - pigment rubis - carmin 6B",
+      "level": "1",
+      "type": "colorants",
+      "info": ""
+    },
+    {
+      "id": "200",
+      "name": "Acide sorbique",
+      "level": "1",
+      "type": "agents conservateurs",
+      "info": ""
+    }
+  ]
+}

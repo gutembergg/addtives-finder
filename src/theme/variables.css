@@ -1,0 +1,42 @@
+/* Ionic Variables and Theming. */
+/* This is just a placeholder file For more info, please see: */
+/* https://ionicframework.com/docs/theming/basics */
+
+/* To quickly generate your own theme, check out the color generator */
+/* https://ionicframework.com/docs/theming/color-generator */
+
+:root {
+  --ion-color-noir: #171717;
+  --ion-color-noir-rgb: 23, 23, 23;
+  --ion-color-noir-contrast: #ffffff;
+  --ion-color-noir-contrast-rgb: 255, 255, 255;
+  --ion-color-noir-shade: #141414;
+  --ion-color-noir-tint: #2e2e2e;
+}
+
+.ion-color-noir {
+  --ion-color-base: var(--ion-color-noir);
+  --ion-color-base-rgb: var(--ion-color-noir-rgb);
+  --ion-color-contrast: var(--ion-color-noir-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-noir-contrast-rgb);
+  --ion-color-shade: var(--ion-color-noir-shade);
+  --ion-color-tint: var(--ion-color-noir-tint);
+}
+
+:root {
+  --ion-color-input-border: #69bb7b;
+  --ion-color-input-border-rgb: 105, 187, 123;
+  --ion-color-input-border-contrast: #000000;
+  --ion-color-input-border-contrast-rgb: 0, 0, 0;
+  --ion-color-input-border-shade: #5ca56c;
+  --ion-color-input-border-tint: #78c288;
+}
+
+.ion-color-input-border {
+  --ion-color-base: var(--ion-color-input-border);
+  --ion-color-base-rgb: var(--ion-color-input-border-rgb);
+  --ion-color-contrast: var(--ion-color-input-border-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-input-border-contrast-rgb);
+  --ion-color-shade: var(--ion-color-input-border-shade);
+  --ion-color-tint: var(--ion-color-input-border-tint);
+}

@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Search</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="input_block">
+        <ion-item color="noir" class="ion-no-padding">
+            <ion-label [style.color]="'gray'" [style.font-size]="'30px'">E</ion-label>
+            <ion-input #searchInput type="text" value=""></ion-input>
+        </ion-item>
+        <div>
+
+            <ion-button [disabled]="searchInput?.value?.length <= 2"
+                [routerLink]="'../detail/' + searchInput?.value?.toString()" color="medium" shape="round"
+                fill="outline">
+                <ion-icon name="search-outline"></ion-icon>
+                Chercher
+            </ion-button>
+        </div>
+    </div>
+</ion-content>
