@@ -10,7 +10,6 @@ export class ColorsPipe implements PipeTransform {
 
     switch (true) {
       case value === "0":
-        console.log("value", value);
         color = "#2dd36f";
         break;
       case value === "1":

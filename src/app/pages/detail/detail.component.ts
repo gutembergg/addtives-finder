@@ -11,7 +11,7 @@ import { IAdditive } from "src/app/interfaces/IAdditive";
 })
 export class DetailComponent implements OnInit {
   additive$: IAdditive;
-  addtiveInfo: string;
+  info: any;
 
   constructor(
     private addtiveService: AdditivesService,
@@ -22,6 +22,7 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     const { id } = this._activatedRoute.snapshot.params;
     this.getAdditiveDetail(id);
+    this.getAddtiveInfo(id);
   }
 
   async getAdditiveDetail(id: string) {
@@ -29,8 +30,14 @@ export class DetailComponent implements OnInit {
       .getById(id)
       .pipe(first())
       .toPromise();
+  }
 
-    this.addtiveInfo = this.additive$.info;
+  async getAddtiveInfo(id: string) {
+    this.info = await this.addtiveService
+      .getAddtiveInfo(id)
+      .pipe(first())
+      .toPromise();
+    console.log("info", this.info);
   }
 
   goBack(): void {

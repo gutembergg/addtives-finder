@@ -9,7 +9,7 @@
 
 <ion-content>
     <ion-list class="ion-no-padding">
-        <ion-item detail="false" *ngFor="let item of (items$|async)">
+        <ion-item detail="false" *ngFor="let item of (items$|async)?.slice(min, max)">
             <ion-thumbnail class="ion-no-margin" [ngStyle]="{ 'background': item.level | colors }" slot="start">
                 {{ item?.id }}
             </ion-thumbnail>
@@ -26,10 +26,8 @@
         </ion-item>
     </ion-list>
 
-    <!-- <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
         <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
-
-
         </ion-infinite-scroll-content>
-    </ion-infinite-scroll> -->
+    </ion-infinite-scroll>
 </ion-content>

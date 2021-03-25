@@ -48,11 +48,13 @@
             </ion-card-content>
         </div>
     </ion-card>
-    <ion-card *ngIf="addtiveInfo">
+
+    <ion-card *ngIf="info">
         <ion-card-content>
             <ion-text>
-                {{ addtiveInfo }}
+                {{ info?.extract }}
             </ion-text>
         </ion-card-content>
     </ion-card>
+
 </ion-content>
