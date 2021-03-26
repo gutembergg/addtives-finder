@@ -12,6 +12,10 @@ import { IAdditive } from "src/app/interfaces/IAdditive";
 export class DetailComponent implements OnInit {
   additive$: IAdditive;
   info: any;
+  itemLocal: any;
+
+  selctedAdditive: IAdditive;
+  extractAdditive: string;
 
   constructor(
     private addtiveService: AdditivesService,
@@ -21,15 +25,19 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     const { id } = this._activatedRoute.snapshot.params;
-    this.getAdditiveDetail(id);
+    this.getLocalList(id);
     this.getAddtiveInfo(id);
   }
 
-  async getAdditiveDetail(id: string) {
-    this.additive$ = await this.addtiveService
-      .getById(id)
+  async getLocalList(id: string) {
+    this.itemLocal = await this.addtiveService
+      .getLocalList()
       .pipe(first())
       .toPromise();
+
+    const result = this.itemLocal.filter((item) => item.id === id);
+
+    this.selctedAdditive = result[0];
   }
 
   async getAddtiveInfo(id: string) {
@@ -37,7 +45,7 @@ export class DetailComponent implements OnInit {
       .getAddtiveInfo(id)
       .pipe(first())
       .toPromise();
-    console.log("info", this.info);
+    this.extractAdditive = this.info.extract_html;
   }
 
   goBack(): void {

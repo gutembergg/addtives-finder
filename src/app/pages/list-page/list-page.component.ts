@@ -15,21 +15,17 @@ export class ListPageComponent implements OnInit {
   min = 0;
   max = 10;
 
+  selectedAdditive: IAdditive;
+
   constructor(private additivesService: AdditivesService) {}
 
   ngOnInit(): void {
-    this.getAddtives();
     this.getLocalList();
-  }
-
-  getAddtives(): Observable<IAdditive[]> {
-    return (this.items$ = this.additivesService.getAll());
   }
 
   loadData($event) {
     this.max = this.max + 10;
     $event.target.complete();
-    console.log("event", this.min, this.max);
   }
 
   async getLocalList() {
@@ -37,5 +33,30 @@ export class ListPageComponent implements OnInit {
       .getLocalList()
       .pipe(first())
       .toPromise();
+  }
+
+  getAdditiveByLevel(level: string) {
+    const list = this.itemLocal;
+    let result: string[] = [];
+
+    switch (true) {
+      case level === "0":
+        result = list.filter((item) => item.level === level);
+        break;
+      case level === "1":
+        result = list.filter((item) => item.level === level);
+        break;
+      case level === "2":
+        result = list.filter(
+          (item) => item.level === level && item.level === "3"
+        );
+        break;
+      case level === "3":
+        result = list.filter((item) => item.level === level);
+        break;
+      default:
+        result = this.itemLocal;
+    }
+    return (this.itemLocal = result);
   }
 }

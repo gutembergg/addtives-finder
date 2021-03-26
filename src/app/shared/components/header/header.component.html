@@ -1,0 +1,13 @@
+<ion-toolbar color="dark">
+    <ion-title *ngIf="title">
+        <div class="header_info">
+            <div>
+                <ion-icon (click)="goBack()" class="ion-padding-end" name="arrow-back-outline"></ion-icon>
+                <span>{{title}}</span>
+            </div>
+            <div>
+                <ion-icon (click)="presentPopover($event)" class="info" name="alert-circle-outline"></ion-icon>
+            </div>
+        </div>
+    </ion-title>
+</ion-toolbar>

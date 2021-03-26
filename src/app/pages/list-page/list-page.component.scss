@@ -16,3 +16,22 @@ ion-item {
 ion-label {
   padding: 15px;
 }
+
+ion-grid {
+  background: var(--ion-color-noir);
+}
+
+ion-icon.green {
+  color: var(--ion-color-success);
+  font-size: 30px;
+}
+
+ion-icon.yellow {
+  color: var(--ion-color-warning);
+  font-size: 30px;
+}
+
+ion-icon.red {
+  color: var(--ion-color-danger);
+  font-size: 30px;
+}

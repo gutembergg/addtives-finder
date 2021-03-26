@@ -5,12 +5,11 @@ import { map } from "rxjs/operators";
 import { environment } from "src/environments/environment";
 import { IAdditive } from "../interfaces/IAdditive";
 
-const baseUrl = environment.baseUrl;
 const localUrl = environment.localUrl;
 
 const routes = {
-  list: () => `${baseUrl}/additives`,
-  detail: (id: string) => `${baseUrl}/additives/${id}`,
+  list: () => `${localUrl}/`,
+  detail: (id: string) => `${localUrl}/${id}`,
   listLocal: () => `${localUrl}`
 };
 
@@ -30,7 +29,7 @@ export class AdditivesService {
 
   getAddtiveInfo(id: string): Observable<any> {
     return this._http.get(
-      `https://fr.wikipedia.org/api/rest_v1/page/summary/${id}`
+      `https://fr.wikipedia.org/api/rest_v1/page/summary/E${id}`
     );
   }
 

@@ -1,15 +1,30 @@
 <ion-header>
-    <ion-toolbar color="dark">
-        <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-        </ion-buttons>
-        <ion-title>List</ion-title>
-    </ion-toolbar>
+    <app-header title="Additives"></app-header>
 </ion-header>
 
 <ion-content>
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <ion-col class="ion-text-center" size="3">
+                <div>
+                    <ion-icon (click)="getAdditiveByLevel('0')" class="green" name="ellipse"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col class="ion-text-center" size="3">
+                <div>
+                    <ion-icon (click)="getAdditiveByLevel('1')" class="yellow" name="ellipse"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col class="ion-text-center" size="3">
+                <div>
+                    <ion-icon (click)="getAdditiveByLevel('2')" class="red" name="ellipse"></ion-icon>
+                </div>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
     <ion-list class="ion-no-padding">
-        <ion-item detail="false" *ngFor="let item of (items$|async)?.slice(min, max)">
+        <ion-item detail="false" *ngFor="let item of itemLocal?.slice(min, max)">
             <ion-thumbnail class="ion-no-margin" [ngStyle]="{ 'background': item.level | colors }" slot="start">
                 {{ item?.id }}
             </ion-thumbnail>

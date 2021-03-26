@@ -4,11 +4,11 @@ import { CommonModule } from "@angular/common";
 import { DetailRoutingModule } from "./detail-routing.module";
 import { DetailComponent } from "./detail.component";
 import { IonicModule } from "@ionic/angular";
-import { LevelPipe } from "src/app/pipes/level/level.pipe";
 import { ColorsPipe } from "src/app/pipes/colors/colors.pipe";
+import { SharedModule } from "src/app/shared/shared.module";
 
 @NgModule({
-  declarations: [DetailComponent, LevelPipe, ColorsPipe],
-  imports: [CommonModule, DetailRoutingModule, IonicModule]
+  declarations: [DetailComponent, ColorsPipe],
+  imports: [CommonModule, DetailRoutingModule, IonicModule, SharedModule]
 })
 export class DetailModule {}

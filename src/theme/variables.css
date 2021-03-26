@@ -12,6 +12,10 @@
   --ion-color-noir-contrast-rgb: 255, 255, 255;
   --ion-color-noir-shade: #141414;
   --ion-color-noir-tint: #2e2e2e;
+
+  --ion-color-success: #2dd36f;
+  --ion-color-warning: #ffc409;
+  --ion-color-danger: #eb445a;
 }
 
 .ion-color-noir {

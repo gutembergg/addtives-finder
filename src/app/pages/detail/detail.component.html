@@ -1,32 +1,9 @@
 <ion-header>
-    <ion-toolbar color="dark">
-        <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-        </ion-buttons>
-        <ion-title>
-
-            <ion-grid>
-                <ion-row class="ion-justify-content-end">
-                    <ion-col>
-                        <p>
-                            <ion-icon (click)="goBack()" class="ion-padding-end" name="arrow-back-outline"></ion-icon>
-                            Detail
-                        </p>
-                    </ion-col>
-
-                    <ion-col>
-
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
-
-
-        </ion-title>
-    </ion-toolbar>
+    <app-header title="{{selctedAdditive?.name}}"></app-header>
 </ion-header>
 
 <ion-content>
-    <ion-card *ngIf="(additive$) as item">
+    <ion-card *ngIf="(selctedAdditive) as item">
         <ion-card-header color="{{item.level | colors}}" class="ion-text-center">
             <ion-text>
                 <h1>{{item.id}}</h1>
@@ -49,10 +26,9 @@
         </div>
     </ion-card>
 
-    <ion-card *ngIf="info">
+    <ion-card *ngIf="extractAdditive">
         <ion-card-content>
-            <ion-text>
-                {{ info?.extract }}
+            <ion-text [innerHTML]="extractAdditive">
             </ion-text>
         </ion-card-content>
     </ion-card>
