@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { first } from "rxjs/operators";
+import { map } from "rxjs/operators";
 import { IAdditive } from "src/app/interfaces/IAdditive";
 import { AdditivesService } from "src/app/services/additives.service";
 
@@ -10,53 +10,33 @@ import { AdditivesService } from "src/app/services/additives.service";
   styleUrls: ["./list-page.component.scss"]
 })
 export class ListPageComponent implements OnInit {
-  items$: Observable<IAdditive[]>;
-  itemLocal: any;
-  min = 0;
+  itemLocal: Observable<IAdditive[]>;
   max = 10;
+  min = 0;
 
   selectedAdditive: IAdditive;
 
   constructor(private additivesService: AdditivesService) {}
 
   ngOnInit(): void {
-    this.getLocalList();
+    this.itemLocal = this.additivesService.getLocalList();
   }
 
-  loadData($event) {
+  async loadData($event) {
     this.max = this.max + 10;
     $event.target.complete();
   }
 
-  async getLocalList() {
-    this.itemLocal = await this.additivesService
-      .getLocalList()
-      .pipe(first())
-      .toPromise();
-  }
+  filterByLevel($event) {
+    const { detail: { value = null } = {} } = $event;
 
-  getAdditiveByLevel(level: string) {
-    const list = this.itemLocal;
-    let result: string[] = [];
-
-    switch (true) {
-      case level === "0":
-        result = list.filter((item) => item.level === level);
-        break;
-      case level === "1":
-        result = list.filter((item) => item.level === level);
-        break;
-      case level === "2":
-        result = list.filter(
-          (item) => item.level === level && item.level === "3"
-        );
-        break;
-      case level === "3":
-        result = list.filter((item) => item.level === level);
-        break;
-      default:
-        result = this.itemLocal;
-    }
-    return (this.itemLocal = result);
+    this.itemLocal = this.additivesService.getLocalList().pipe(
+      map((items) => {
+        if (value === null) {
+          return items;
+        }
+        return items.filter((i) => i.level === value);
+      })
+    );
   }
 }

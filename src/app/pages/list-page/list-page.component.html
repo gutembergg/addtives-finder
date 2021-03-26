@@ -3,28 +3,23 @@
 </ion-header>
 
 <ion-content>
-    <ion-grid>
-        <ion-row class="ion-justify-content-center">
-            <ion-col class="ion-text-center" size="3">
-                <div>
-                    <ion-icon (click)="getAdditiveByLevel('0')" class="green" name="ellipse"></ion-icon>
-                </div>
-            </ion-col>
-            <ion-col class="ion-text-center" size="3">
-                <div>
-                    <ion-icon (click)="getAdditiveByLevel('1')" class="yellow" name="ellipse"></ion-icon>
-                </div>
-            </ion-col>
-            <ion-col class="ion-text-center" size="3">
-                <div>
-                    <ion-icon (click)="getAdditiveByLevel('2')" class="red" name="ellipse"></ion-icon>
-                </div>
-            </ion-col>
+    <ion-segment [value]="null" (ionChange)="filterByLevel($event)">
+        <ion-segment-button [value]=null>
+            <ion-label>null</ion-label>
+        </ion-segment-button>
+        <ion-segment-button [value]="0">
+            <ion-label>0</ion-label>
+        </ion-segment-button>
+        <ion-segment-button [value]="2">
+            <ion-label>1</ion-label>
+        </ion-segment-button>
+        <ion-segment-button [value]="3">
+            <ion-label>2</ion-label>
+        </ion-segment-button>
+    </ion-segment>
 
-        </ion-row>
-    </ion-grid>
     <ion-list class="ion-no-padding">
-        <ion-item detail="false" *ngFor="let item of itemLocal?.slice(min, max)">
+        <ion-item detail="false" *ngFor="let item of (itemLocal|async)?.slice(min, max)">
             <ion-thumbnail class="ion-no-margin" [ngStyle]="{ 'background': item.level | colors }" slot="start">
                 {{ item?.id }}
             </ion-thumbnail>

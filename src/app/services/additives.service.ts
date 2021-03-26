@@ -19,9 +19,9 @@ const routes = {
 export class AdditivesService {
   constructor(private _http: HttpClient) {}
 
-  getAll(): Observable<IAdditive[]> {
+  /* getAll(): Observable<IAdditive[]> {
     return this._http.get<IAdditive[]>(routes.list());
-  }
+  } */
 
   getById(id: string): Observable<IAdditive> {
     return this._http.get<IAdditive>(routes.detail(id));
@@ -33,9 +33,15 @@ export class AdditivesService {
     );
   }
 
-  getLocalList(): Observable<any> {
+  getLocalList(): Observable<IAdditive[]> {
     return this._http
-      .get<any>(routes.listLocal())
-      .pipe(map((data: any) => data.additives));
+      .get(routes.listLocal())
+      .pipe(map((response: { additives: IAdditive[] }) => response.additives));
   }
+
+  /* getLocalList(): Observable<any> {
+    return this._http
+      .get(routes.listLocal())
+      .pipe(map((data: any) => data.additives));
+  } */
 }
