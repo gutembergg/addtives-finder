@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "api": "json-server --watch db.json"
+    "api": "json-server --watch db.json",
+    "deploy:githubCI": "ng deploy --base-href=./ --repo=https://github.com/gutembergg/addtives-finder.git --name=gutembergg --email=46713843+gutembergg@users.noreply.github.com --no-silent"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "@angular/platform-browser": "~11.2.5",
     "@angular/platform-browser-dynamic": "~11.2.5",
     "@angular/router": "~11.2.5",
+    "@angular/service-worker": "~11.2.5",
     "@ionic/angular": "^5.6.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
