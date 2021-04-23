@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1618566728943,
+  "timestamp": 1619168024841,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -11,9 +11,9 @@
         "ignoreVary": true
       },
       "urls": [
-        "./10.a1c1b13f2efd0c80e473.js",
-        "./11.59adfe55f2d41601b7b4.js",
-        "./12.10f1a59bd004ce473b77.js",
+        "./10.ac0da4fdce479a2b6b33.js",
+        "./11.414f8f04f1f319d2be3e.js",
+        "./12.585855bd198552aa8473.js",
         "./13.541ff7c1c6c9e184ee71.js",
         "./14.f90e2acd2cc92a018bd1.js",
         "./15.8f1e3274a8180fcc987f.js",
@@ -65,17 +65,18 @@
         "./60.9aeac0b9a6d4e3db3644.js",
         "./61.20085341555f88d0d056.js",
         "./62.a93f2c9e9cd59152ce68.js",
-        "./9.78ded26b25633ee1a907.js",
-        "./common.9fdb8f57d637806ff6bc.js",
+        "./63.b52f55d9e8174e72faab.js",
+        "./9.65df3ecab22bb0e45925.js",
+        "./common.d482f94dcd3443fa3cbc.js",
         "./favicon.ico",
         "./index.html",
-        "./main.491beac60c89c32a2083.js",
+        "./main.7ed0b069c2d13f5af45b.js",
         "./manifest.webmanifest",
         "./polyfills-core-js.926b2b327e549d9db414.js",
         "./polyfills-css-shim.359ce37e09f907eb011b.js",
         "./polyfills-dom.bf6c5ee357b1ca4890e9.js",
         "./polyfills.01aff1db8200ab482099.js",
-        "./runtime.c74bd08f87faf6173741.js",
+        "./runtime.64a9c4e5b2b87efee0e8.js",
         "./styles.40a708393318ff317fdf.css"
       ],
       "patterns": []
@@ -97,16 +98,31 @@
         "./assets/icons/icon-512x512.png",
         "./assets/icons/icon-72x72.png",
         "./assets/icons/icon-96x96.png",
+        "./assets/inject-json-to-firestore.service.ts",
         "./assets/undraw_Eco_conscious_re_r2bs.svg"
       ],
       "patterns": []
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "additive",
+      "patterns": [
+        "\\/\\.\\.\\/assets\\/db\\.json"
+      ],
+      "strategy": "performance",
+      "maxSize": 10,
+      "maxAge": 86400000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
   "hashTable": {
-    "./10.a1c1b13f2efd0c80e473.js": "b839576fcaa4ca6479eaa290f820bc5f8cda7dfc",
-    "./11.59adfe55f2d41601b7b4.js": "a4bb44047c37229946123c15a757bb892596710a",
-    "./12.10f1a59bd004ce473b77.js": "875a60f539a139788d31b837912196ed500a866f",
+    "./10.ac0da4fdce479a2b6b33.js": "2120c53ffc8f55bfa3c1a205bb05cc466b304374",
+    "./11.414f8f04f1f319d2be3e.js": "91c377d32a17966bcb022458e500d488887e89a4",
+    "./12.585855bd198552aa8473.js": "c6e9f0f95608e53fb50b78da2a759b5c39e2d0dc",
     "./13.541ff7c1c6c9e184ee71.js": "0966e7ceb99d3cd69f2888e7705ed6f7823a94a7",
     "./14.f90e2acd2cc92a018bd1.js": "62ed29beeb0b8a60521e8d543d568263c355feaa",
     "./15.8f1e3274a8180fcc987f.js": "cc9d81548e9ef4497c651859768948c7e3d6b2e4",
@@ -158,7 +174,8 @@
     "./60.9aeac0b9a6d4e3db3644.js": "f8b3e2fa26c90695ddc3d27c80fd7911376d437c",
     "./61.20085341555f88d0d056.js": "9b21c55e1f08d68f55e2c01a3654c0d15b6c5ad5",
     "./62.a93f2c9e9cd59152ce68.js": "3053b464c2fc6ddb6d8c43acf41f9b9f857f885d",
-    "./9.78ded26b25633ee1a907.js": "d87b02c50a6f0a2393d24a8d3a72fa881a6b686d",
+    "./63.b52f55d9e8174e72faab.js": "1d7cda568578ec26495eb9b0b3d3327f6cb4d0b8",
+    "./9.65df3ecab22bb0e45925.js": "826134dd36deeb45c422a9a20652033f672da70b",
     "./assets/db.json": "3de932066931f0709bb1bcbf556426fa90a865d6",
     "./assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "./assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
@@ -168,17 +185,18 @@
     "./assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "./assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "./assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "./assets/inject-json-to-firestore.service.ts": "f2889ff02aa49035f7d0e5bb94b3146e881be597",
     "./assets/undraw_Eco_conscious_re_r2bs.svg": "890bf4f834c5a38530424ecee2f8d9d6b60ee359",
-    "./common.9fdb8f57d637806ff6bc.js": "e5437c1175e03236f9e00eb289a2db4efc9aa01e",
+    "./common.d482f94dcd3443fa3cbc.js": "eaf0add4f0a7a2af32e68e5d4023501d9ddd703f",
     "./favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "./index.html": "e3c9870a14f1d4647a6c9b9e3d9cf844a675009f",
-    "./main.491beac60c89c32a2083.js": "13d6fd1556ae2d3bca457ed0eb9a279023027766",
+    "./index.html": "5ff8237e92594473a8af98989581ebf70fae74d5",
+    "./main.7ed0b069c2d13f5af45b.js": "e129d4742b80e1d10560eac3a9e53925e93cc154",
     "./manifest.webmanifest": "640461c4fc2ce570ee2ca5164807ebf70333e7f5",
     "./polyfills-core-js.926b2b327e549d9db414.js": "f71279ef311f3c1cecc661b8aabe632959a282f8",
     "./polyfills-css-shim.359ce37e09f907eb011b.js": "3f4dd6685f2d8a7a5f6fe2d3fa9e9320d460b112",
     "./polyfills-dom.bf6c5ee357b1ca4890e9.js": "3d12740300342a24e404779d9c0a06c58f44ec7c",
     "./polyfills.01aff1db8200ab482099.js": "74c31d3e548a2093d0cee7bdd10c3f127c7f0ae8",
-    "./runtime.c74bd08f87faf6173741.js": "b1317c8f3c8b71451666ae1bbc60fbe8b89a69cd",
+    "./runtime.64a9c4e5b2b87efee0e8.js": "614d3403999083c56ee430405ba47a610e124282",
     "./styles.40a708393318ff317fdf.css": "aecf11c991833085aa58f35a9813220d8473346a"
   },
   "navigationUrls": [
