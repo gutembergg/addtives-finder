@@ -18,8 +18,14 @@
         </ion-segment-button>
     </ion-segment>
 
+    <!--   <ion-list>
+        <ion-item *ngFor="let item of dbList">
+            <ion-label>{{ item.name }}</ion-label>
+        </ion-item>
+    </ion-list> -->
+
     <ion-list class="ion-no-padding">
-        <ion-item detail="false" *ngFor="let item of (itemLocal|async)?.slice(min, max)">
+        <ion-item detail="false" *ngFor="let item of dbList.slice(min, max)">
             <ion-thumbnail class="ion-no-margin" [ngStyle]="{ 'background': item.level | colors }" slot="start">
                 {{ item?.id }}
             </ion-thumbnail>

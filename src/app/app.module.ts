@@ -5,8 +5,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { IonicModule } from "@ionic/angular";
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,11 +17,13 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     HttpClientModule,
     IonicModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', {
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: "registerWhenStable:30000"
     })
   ],
   providers: [],

@@ -1,8 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { first, map, tap } from "rxjs/operators";
 import { IAdditive } from "src/app/interfaces/IAdditive";
 import { AdditivesService } from "src/app/services/additives.service";
+import { FirebaseService } from "src/app/services/firebase/firebase.service";
 
 @Component({
   selector: "app-list-page",
@@ -16,10 +17,19 @@ export class ListPageComponent implements OnInit {
 
   selectedAdditive: IAdditive;
 
-  constructor(private additivesService: AdditivesService) {}
+  dbList: IAdditive[];
 
-  ngOnInit(): void {
+  constructor(
+    private additivesService: AdditivesService,
+    private _firestore: FirebaseService
+  ) {}
+
+  ngOnInit() {
     this.itemLocal = this.additivesService.getLocalList();
+
+    this._firestore.additivesList$
+      .pipe(tap((response) => console.log("==>", response)))
+      .subscribe((res) => (this.dbList = res));
   }
 
   async loadData($event) {
@@ -30,13 +40,14 @@ export class ListPageComponent implements OnInit {
   filterByLevel($event) {
     const { detail: { value = null } = {} } = $event;
 
-    this.itemLocal = this.additivesService.getLocalList().pipe(
-      map((items) => {
-        if (value === null) {
-          return items;
-        }
-        return items.filter((i) => i.level === value);
-      })
-    );
+    this._firestore.additivesList$
+      .pipe(tap((response) => console.log("==>", response)))
+      .subscribe((res) => (this.dbList = res));
+
+    if (value === null) {
+      return;
+    }
+
+    this.dbList = this.dbList.filter((additive) => additive.level === value);
   }
 }

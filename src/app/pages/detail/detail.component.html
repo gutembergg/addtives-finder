@@ -24,7 +24,13 @@
 
             </ion-card-content>
         </div>
+
     </ion-card>
+
+    <ion-item>
+        <ion-label>Favorite</ion-label>
+        <ion-icon (click)="addFavorite(selctedAdditive.id)" name="heart-sharp"></ion-icon>
+    </ion-item>
 
     <ion-card *ngIf="extractAdditive">
         <ion-card-content>
